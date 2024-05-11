@@ -27,7 +27,7 @@ const Sidebar = () => {
         <nav className="sidebar-nav">
           <SignedIn>
             <ul className="sidebar-nav_elements">
-              {navLinks.map((link) => {
+              {navLinks.slice(0, 6).map((link) => {
                 const isActive = link.route === pathName;
                 return (
                   <li
@@ -51,8 +51,35 @@ const Sidebar = () => {
                   </li>
                 );
               })}
-              <li className="flex-center cursor-pointer gap-2 p-4">
-                <UserButton afterSignOutUrl="/" showName/>
+            </ul>
+            <ul>
+              {navLinks.slice(6).map((link) => {
+                const isActive = link.route === pathName;
+                return (
+                  <li
+                    key={link.route}
+                    className={`sidebar-nav_element group ${
+                      isActive
+                        ? "bg-purple-gradient text-white"
+                        : "text-gray-700"
+                    }`}
+                  >
+                    <Link href={link.route} className="sidebar-link">
+                      <Image
+                        src={link.icon}
+                        alt="logo"
+                        width={24}
+                        height={24}
+                        className={`${isActive && "brightness-200"}`}
+                      />
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
+              <hr className="border-gray-300" />
+              <li className="flex-start cursor-pointer gap-2 p-4">
+                <UserButton afterSignOutUrl="/" showName />
               </li>
             </ul>
           </SignedIn>
