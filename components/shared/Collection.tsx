@@ -71,7 +71,7 @@ export const Collection = ({
             <Button
               disabled={Number(page) <= 1}
               className="collection-btn"
-              onClick={() => onPageChange("prev")}
+              onClick={() => ("prev")}
             >
               <PaginationPrevious className="hover:bg-transparent hover:text-white" />
             </Button>
