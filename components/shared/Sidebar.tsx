@@ -1,7 +1,7 @@
 "use client";
 
 import { navLinks } from "@/constants";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -86,7 +86,7 @@ const Sidebar = () => {
 
           <SignedOut>
             <Button asChild className="button bg-purple-gradient bg-cover">
-              <Link href="/sign-in">Sign In</Link>
+              <SignInButton />
             </Button>
           </SignedOut>
         </nav>
