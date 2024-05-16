@@ -1,6 +1,9 @@
 # Imagigenius 🌟📷 [(Live)](https://imagi-genius.vercel.app/)
 
-Imagigenius is a Next.js project that leverages TypeScript, Tailwind CSS, Clerk, MongoDB, Zod, Stripe, and various AI integrations (like Cloudinary) to provide image enhancement and manipulation functionalities. Users can register and interact with the system to enhance, modify, or process images using AI-powered features.
+Imagigenius is a Next.js Saas project that leverages TypeScript, Tailwind CSS, Clerk, MongoDB, Zod, Stripe, and AI integrations (like Cloudinary) to provide image enhancement and manipulation functionalities. Users can register and interact with the system to enhance, modify, or process images using AI-powered features.
+
+![image](https://github.com/amitamrutiya2210/ImagiGenius/assets/91112485/d88ae136-3ed8-4710-b2df-32ed45e116ba)
+
 
 ## Features 🚀
 
@@ -11,14 +14,36 @@ Users can create accounts or sign in using email/password, Google, or GitHub aut
 ### Image Manipulation Functionalities 🖼️
 
 1. **Image Restore**: Enhance the quality of images using AI.
+
+![image](https://github.com/amitamrutiya2210/ImagiGenius/assets/91112485/cd86b727-3ae2-4f59-8d3c-6290fcd7c170)
+
 2. **Generative Fill**: Change the aspect ratio of images without altering the content using Cloudinary AI.
+
+![image](https://github.com/amitamrutiya2210/ImagiGenius/assets/91112485/15773459-85d4-4902-9218-0ba02e2fe72f)
+
+
 3. **Object Remove**: Remove selected objects from images using AI.
+
+![image](https://github.com/amitamrutiya2210/ImagiGenius/assets/91112485/dddd8c0c-5d48-4a5f-bc61-5509da900741)
+
+
 4. **Object Recolor**: Recolor specific parts of images.
+
+![image](https://github.com/amitamrutiya2210/ImagiGenius/assets/91112485/11d0fa60-cf57-477b-902b-c959024a9efa)
+
+
 5. **Background Remove**: Remove image backgrounds and generate PNGs.
+
+![image](https://github.com/amitamrutiya2210/ImagiGenius/assets/91112485/d831f91d-0b4e-4387-af58-dc457660c341)
+
+
 
 ### Credit System 💳
 
 Users have a limited number of credits (5) for utilizing image processing services. Additional credits can be purchased via Stripe payments.
+
+![image](https://github.com/amitamrutiya2210/ImagiGenius/assets/91112485/80489bf4-5c21-4ae9-a53c-834d063ed8ab)
+
 
 ### Database 📊
 
