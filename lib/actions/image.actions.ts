@@ -94,7 +94,11 @@ export async function getImageById(imageId: string) {
 }
 
 // GET IMAGES
-export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
+export async function getAllImages({
+  limit = 9,
+  page = 1,
+  searchQuery = "",
+}: {
   limit?: number;
   page: number;
   searchQuery?: string;
@@ -107,12 +111,12 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
       api_key: process.env.CLOUDINARY_API_KEY,
       api_secret: process.env.CLOUDINARY_API_SECRET,
       secure: true,
-    })
+    });
 
-    let expression = 'folder=imagigenius';
+    let expression = "folder=imagigenius";
 
     if (searchQuery) {
-      expression += ` AND ${searchQuery}`
+      expression += ` AND ${searchQuery}`;
     }
 
     const { resources } = await cloudinary.search
@@ -123,15 +127,15 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
 
     let query = {};
 
-    if(searchQuery) {
+    if (searchQuery) {
       query = {
         publicId: {
-          $in: resourceIds
-        }
-      }
+          $in: resourceIds,
+        },
+      };
     }
 
-    const skipAmount = (Number(page) -1) * limit;
+    const skipAmount = (Number(page) - 1) * limit;
 
     const images = await populateUser(Image.find(query))
       .sort({ updatedAt: -1 })
@@ -145,8 +149,8 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
       data: JSON.parse(JSON.stringify(images)),
       totalPage: Math.ceil(totalImages / limit),
       savedImages,
-    }
+    };
   } catch (error) {
-    handleError(error)
+    handleError(error);
   }
 }
