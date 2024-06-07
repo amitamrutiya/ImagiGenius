@@ -4,6 +4,7 @@ Imagigenius is a Next.js Saas project that leverages TypeScript, Tailwind CSS, C
 
 ![image](https://github.com/amitamrutiya2210/ImagiGenius/assets/91112485/d88ae136-3ed8-4710-b2df-32ed45e116ba)
 
+https://github.com/amitamrutiya/ImagiGenius/assets/91112485/9ff0ad5f-af3a-48a7-a09f-e226ba4a21d7
 
 ## Features 🚀
 
